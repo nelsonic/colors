@@ -7,13 +7,18 @@
 		<div id='blue'>blue</div>
 		<div id='hex'>hex</div>
 		<div id='color-block'> </div>
-		<div id='colors'> </div>
+		<button onclick='stop()'  id='stop'>Stop</button>
+		<div id='colors'><div id='prevNode'></div></div>
+		
 	</div> <!-- end #main -->
 
 	<script>
-	window.onload = function() { 
+	var r=0, g=0, b=0, cb, prevNode, timerInterval; // globals
+	function stop() {
+		clearInterval(timerInterval);
+	}
 
-		var r=0, g=0, b=0, cb, timerInterval; // globals
+	window.onload = function() { 
 
 		cb = document.getElementById('color-block');
 		red = document.getElementById('red');
@@ -21,14 +26,16 @@
 		blue = document.getElementById('blue');
 		hex = document.getElementById('hex');
 		colors = document.getElementById('colors');
+		prevNode = document.getElementById('prevNode');
 
 		timerInterval = setInterval(function() {
-		            changeColor()
+		    changeColor()
 		    if (r === 255) {
 		    	clearInterval(timerInterval);
 		    }
-		 }, 20);
+		 }, 1);
 	
+
 
 		function changeColor() {
 			r = Math.floor(Math.random() * 254) + 1;
@@ -41,13 +48,14 @@
 			hex.innerHTML = hexColor;
 			hex.style.color = hexColor;
 
-			cb.style.backgroundColor = "rgb(" +r +", " +g +", " +b +")";
+			cb.style.backgroundColor = hexColor;
 
 			var c = document.createElement("div");
 			c.className = 'tiny-block';
 			c.style.backgroundColor = hexColor;
 
-			colors.appendChild(c);
+			colors.insertBefore(c, prevNode);
+			prevNode = c;
 		}
 	}
 
@@ -72,13 +80,15 @@
 	#color-block {
 		border-radius: 10px;
 		background-color: white;
-		width: 90%;
+		width: 70%;
 		height: 40px;
 		margin-top: 10px;
 		border: 1px solid black;
+		/*display: inline;*/
 	}
+	button { width: :25%; float: left; display: inline;}
 	#colors {margin-top: 10px;}
-	.tiny-block { width:40px; height: 40px; display: block; float:left; border-radius: 10px; margin: 1px;}
+	.tiny-block { width:50px; height: 50px; display: block; float:left; border-radius: 10px; margin: 1px;}
 	#red { color: red; }
 	#green { color: green; }
 	#blue { color:blue; }
