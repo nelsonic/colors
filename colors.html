@@ -5,7 +5,9 @@
 		<div id='red'>red</div>
 		<div id='green'>green</div>
 		<div id='blue'>blue</div>
+		<div id='hex'>hex</div>
 		<div id='color-block'> </div>
+		<div id='colors'> </div>
 	</div> <!-- end #main -->
 
 	<script>
@@ -14,26 +16,54 @@
 		var r=0, g=0, b=0, cb, timerInterval; // globals
 
 		cb = document.getElementById('color-block');
-		rdiv = document.getElementById('red');
-		gdiv = document.getElementById('green');
-		bdiv = document.getElementById('blue');
+		red = document.getElementById('red');
+		green = document.getElementById('green');
+		blue = document.getElementById('blue');
+		hex = document.getElementById('hex');
+		colors = document.getElementById('colors');
 
 		timerInterval = setInterval(function() {
 		            changeColor()
 		    if (r === 255) {
 		    	clearInterval(timerInterval);
 		    }
-
-		 }, 30);
+		 }, 20);
 	
 
 		function changeColor() {
-			rdiv.innerHTML = r++;
-			gdiv.innerHTML = g++;
-			bdiv.innerHTML = b++;
+			r = Math.floor(Math.random() * 254) + 1;
+			g = Math.floor(Math.random() * 254) + 1;
+			b = Math.floor(Math.random() * 254) + 1;
+			var hexColor = rgbToHex(r,g,b);
+			red.innerHTML = r;
+			green.innerHTML = g;
+			blue.innerHTML = b;
+			hex.innerHTML = hexColor;
+			hex.style.color = hexColor;
 
 			cb.style.backgroundColor = "rgb(" +r +", " +g +", " +b +")";
+
+			var c = document.createElement("div");
+			c.className = 'tiny-block';
+			c.style.backgroundColor = hexColor;
+
+			colors.appendChild(c);
 		}
+	}
+
+	function rgbToHex(R,G,B) {
+		return toHex(R)+toHex(G)+toHex(B)
+	}
+
+	function toHex(n) {
+
+		 n = parseInt(n,10);
+		 if (isNaN(n)) {
+		 	return "00";
+		 }
+
+		 n = Math.max(0,Math.min(n,255));
+		 return "0123456789ABCDEF".charAt((n-n%16)/16) + "0123456789ABCDEF".charAt(n%16);
 	}
 
 	</script>
@@ -47,6 +77,8 @@
 		margin-top: 10px;
 		border: 1px solid black;
 	}
+	#colors {margin-top: 10px;}
+	.tiny-block { width:40px; height: 40px; display: block; float:left; border-radius: 10px; margin: 1px;}
 	#red { color: red; }
 	#green { color: green; }
 	#blue { color:blue; }
