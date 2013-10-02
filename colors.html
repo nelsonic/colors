@@ -1,0 +1,56 @@
+<html>
+<body>
+	<div id='main'>
+
+		<div id='red'>red</div>
+		<div id='green'>green</div>
+		<div id='blue'>blue</div>
+		<div id='color-block'> </div>
+	</div> <!-- end #main -->
+
+	<script>
+	window.onload = function() { 
+
+		var r=0, g=0, b=0, cb, timerInterval; // globals
+
+		cb = document.getElementById('color-block');
+		rdiv = document.getElementById('red');
+		gdiv = document.getElementById('green');
+		bdiv = document.getElementById('blue');
+
+		timerInterval = setInterval(function() {
+		            changeColor()
+		    if (r === 255) {
+		    	clearInterval(timerInterval);
+		    }
+
+		 }, 30);
+	
+
+		function changeColor() {
+			rdiv.innerHTML = r++;
+			gdiv.innerHTML = g++;
+			bdiv.innerHTML = b++;
+
+			cb.style.backgroundColor = "rgb(" +r +", " +g +", " +b +")";
+		}
+	}
+
+	</script>
+
+	<style>
+	#color-block {
+		border-radius: 10px;
+		background-color: white;
+		width: 90%;
+		height: 40px;
+		margin-top: 10px;
+		border: 1px solid black;
+	}
+	#red { color: red; }
+	#green { color: green; }
+	#blue { color:blue; }
+	body { font-family: 'Courier'; }
+	</style>
+</body>
+</html>
