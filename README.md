@@ -29,6 +29,6 @@ So instead we need a way of displaying fewer colors.
 While I was playing I built a quick **Random Color Generator** 
 it does exactly what you would expect. see: **random.html**
 
-![Random Color Generator](https://github.com/nelsonic/colors/blob/master/screenshots/random-color-generator.png "A Simple Random Color Generator!")
+![Random Color Generator](https://raw.github.com/nelsonic/colors/master/screenshots/random-color-generator.png "A Simple Random Color Generator!")
 
 
