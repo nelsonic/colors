@@ -1,0 +1,116 @@
+<html>
+<body>
+	<div id='main'>
+
+		<div id='red'>red</div>
+		<div id='green'>green</div>
+		<div id='blue'>blue</div>
+		<div id='hex'>hex</div>
+		<button onclick='stop()'  id='stop'>Stop</button>
+		<div id='color-block'> </div>
+		<div id='colors'><div id='prevNode'></div></div>
+		
+	</div> <!-- end #main -->
+
+	<script>
+	var r=0, g=0, b=0, cb, prevNode, timerInterval; // globals
+	function stop() {
+		clearInterval(timerInterval);
+	}
+
+	window.onload = function() { 
+
+		cb = document.getElementById('color-block');
+		red = document.getElementById('red');
+		green = document.getElementById('green');
+		blue = document.getElementById('blue');
+		hex = document.getElementById('hex');
+		colors = document.getElementById('colors');
+		prevNode = document.getElementById('prevNode');
+
+		timerInterval = setInterval(function() {
+		    changeColor()
+		    if (r === 255) {
+		    	clearInterval(timerInterval);
+		    }
+		 }, 1);
+	
+
+
+		function changeColor() {
+			r = Math.floor(Math.random() * 254) + 1;
+			g = Math.floor(Math.random() * 254) + 1;
+			b = Math.floor(Math.random() * 254) + 1;
+			var hexColor = rgbToHex(r,g,b);
+			red.innerHTML = r;
+			green.innerHTML = g;
+			blue.innerHTML = b;
+			hex.innerHTML = hexColor;
+			hex.style.color = hexColor;
+
+			cb.style.backgroundColor = hexColor;
+
+			var c = document.createElement("div");
+			c.className = 'tiny-block';
+			c.innerHTML = '#'+hexColor;
+			c.style.backgroundColor = hexColor;
+
+			colors.insertBefore(c, prevNode);
+			prevNode = c;
+		}
+	}
+
+	function rgbToHex(R,G,B) {
+		return toHex(R)+toHex(G)+toHex(B)
+	}
+
+	function toHex(n) {
+
+		 n = parseInt(n,10);
+		 if (isNaN(n)) {
+		 	return "00";
+		 }
+
+		 n = Math.max(0,Math.min(n,255));
+		 return "0123456789ABCDEF".charAt((n-n%16)/16) + "0123456789ABCDEF".charAt(n%16);
+	}
+
+	</script>
+
+	<style>
+	#color-block {
+		border-radius: 10px;
+		background-color: white;
+		width: 70%;
+		height: 40px;
+		margin: 10px;
+		border: 1px solid black;
+		clear:both;
+		/*display: inline;*/
+	}
+	button#stop { width: :60px; height: 40px; 
+		float: right; display: inline;
+		font-size: 24px;
+		border-radius: 10px;
+
+	}
+	#colors {margin-top: 10px;}
+	.tiny-block { width:50px; height: 30px; display: block; float:left; border-radius: 10px; margin: 1px;
+		font-size: 10px;
+		padding-top:20px;
+		padding-left: 3px;
+	}
+	#red { color: red; margin-left: 30px;}
+	#green { color: green; }
+	#blue { color:blue; }
+	#red, #green, #blue, #hex {
+		margin-right: 20px;
+		width: 50px;
+		float: left;
+		display: inline-table;
+		font-size: 40px;
+	}
+	body { font-family: 'Courier'; }
+	</style>
+</body>
+</html>
