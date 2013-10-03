@@ -1,84 +1,97 @@
 <html>
 <body>
 	<div id='main'>
-
 		<div id='red'>red</div>
 		<div id='green'>green</div>
 		<div id='blue'>blue</div>
 		<div id='hex'>hex</div>
+		<button onclick='start()' id='start'>Start</button>
 		<button onclick='stop()'  id='stop'>Stop</button>
-		<div id='color-block'> </div>
+		<div id='largeColor'> </div>
 		<div id='colors'><div id='prevNode'></div></div>
-		
 	</div> <!-- end #main -->
 
 	<script>
-	var r=0, g=0, b=0, cb, prevNode, timerInterval; // globals
-	function stop() {
-		clearInterval(timerInterval);
-	}
+		var C = {}; // single global variable (object)
 
-	window.onload = function() { 
+		function stop() {
+			clearInterval(C.timerInterval);
+			document.getElementById('start').style.display="inline";
+			document.getElementById('stop').style.display="none";
+		}
 
-		cb = document.getElementById('color-block');
-		red = document.getElementById('red');
-		green = document.getElementById('green');
-		blue = document.getElementById('blue');
-		hex = document.getElementById('hex');
-		colors = document.getElementById('colors');
-		prevNode = document.getElementById('prevNode');
+		function start() {
+			C.timerInterval = setInterval(function() {
+			    changeColor();
+			    if (r === 255) {
+			    	stop();
+			    }
+			}, 10);
 
-		timerInterval = setInterval(function() {
-		    changeColor()
-		    if (r === 255) {
-		    	clearInterval(timerInterval);
-		    }
-		 }, 1);
-	
+			document.getElementById('start').style.display="none";
+			document.getElementById('stop').style.display="inline";
+		}
 
+		function init(C) {
+			// only do this once on page load
+			C.largeColor = document.getElementById('largeColor');
+			C.redDiv = document.getElementById('red');
+			C.greenDiv = document.getElementById('green');
+			C.blueDiv = document.getElementById('blue');
+			C.hexDiv = document.getElementById('hex');
+			C.colorsDiv = document.getElementById('colors');
+			C.prevNode = document.getElementById('prevNode');
+
+			start();
+		}
 
 		function changeColor() {
-			r = Math.floor(Math.random() * 254) + 1;
-			g = Math.floor(Math.random() * 254) + 1;
-			b = Math.floor(Math.random() * 254) + 1;
-			var hexColor = rgbToHex(r,g,b);
-			red.innerHTML = r;
-			green.innerHTML = g;
-			blue.innerHTML = b;
-			hex.innerHTML = hexColor;
-			hex.style.color = hexColor;
+			C.r = Math.floor(Math.random() * 254) + 1;
+			C.g = Math.floor(Math.random() * 254) + 1;
+			C.b = Math.floor(Math.random() * 254) + 1;
+			C.hexColor = rgbToHex(C.r,C.g,C.b);
+			C.redDiv.innerHTML = C.r;
+			C.greenDiv.innerHTML = C.g;
+			C.blueDiv.innerHTML = C.b;
+			C.hexDiv.innerHTML = '#'+C.hexColor;
+			C.hexDiv.style.color = C.hexColor;
 
-			cb.style.backgroundColor = hexColor;
+			C.largeColor.style.backgroundColor = C.hexColor;
 
+			// Create a new Color Block Element
 			var c = document.createElement("div");
 			c.className = 'tiny-block';
-			c.innerHTML = '#'+hexColor;
-			c.style.backgroundColor = hexColor;
+			c.innerHTML = '#'+C.hexColor;
+			c.style.backgroundColor = C.hexColor;
 
-			colors.insertBefore(c, prevNode);
-			prevNode = c;
+			C.colorsDiv.insertBefore(c, C.prevNode);
+			C.prevNode = c;
 		}
-	}
 
-	function rgbToHex(R,G,B) {
-		return toHex(R)+toHex(G)+toHex(B)
-	}
+		function rgbToHex(R,G,B) {
+			return toHex(R)+toHex(G)+toHex(B)
+		}
 
-	function toHex(n) {
+		function toHex(n) {
 
-		 n = parseInt(n,10);
-		 if (isNaN(n)) {
-		 	return "00";
-		 }
+			n = parseInt(n,10);
+			if (isNaN(n)) {
+			    return "00";
+			}
 
-		 n = Math.max(0,Math.min(n,255));
-		 return "0123456789ABCDEF".charAt((n-n%16)/16) + "0123456789ABCDEF".charAt(n%16);
-	}
+			n = Math.max(0,Math.min(n,255));
+			return "0123456789ABCDEF".charAt((n-n%16)/16) 
+			    + "0123456789ABCDEF".charAt(n%16);
+		}
+
+		window.onload = function() { 
+			init(C);
+		}
 
 	</script>
 
 	<style>
-	#color-block {
+	#largeColor {
 		border-radius: 10px;
 		background-color: white;
 		width: 70%;
@@ -86,14 +99,20 @@
 		margin: 10px;
 		border: 1px solid black;
 		clear:both;
-		/*display: inline;*/
 	}
-	button#stop { width: :60px; height: 40px; 
+
+	button#stop, button#start { width: :60px; height: 40px; 
 		float: right; display: inline;
-		font-size: 24px;
+		font-size: 16px;
 		border-radius: 10px;
+		color: white;
+		box-shadow: 3px 3px 3px #888888;
+		font-weight: bold;
 
 	}
+	#start { background-color: forestgreen; }
+	#stop  { background-color: crimson;  display: none; }
+
 	#colors {margin-top: 10px;}
 	.tiny-block { width:50px; height: 30px; display: block; float:left; border-radius: 10px; margin: 1px;
 		font-size: 10px;
@@ -110,6 +129,7 @@
 		display: inline-table;
 		font-size: 40px;
 	}
+
 	body { font-family: 'Courier'; }
 	</style>
 </body>
