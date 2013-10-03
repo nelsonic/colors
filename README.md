@@ -29,6 +29,6 @@ So instead we need a way of displaying fewer colors.
 While I was playing I built a quick **Random Color Generator** 
 it does exactly what you would expect. see: **random.html**
 
-	![Stopwach Ready to Go](https://raw.github.com/nelsonic/stopwatch/master/screenshots/Stopwatch-go.png "Simple Stopwatch Ready to Go!")
+![Random Color Generator](https://github.com/nelsonic/colors/blob/master/screenshots/random-color-generator.png "A Simple Random Color Generator!")
 
 
