@@ -10,20 +10,33 @@ Sick of not knowing what the names / hex values of colors were I decided to crea
 ## Intro
 
 Though often overlooked, color is an integral part of our lives.
-
 Nature has used color to communicate since the beginning of time and humans are no exception.
 
 (For the people *unlucky* enough to be 
 [color-blind](http://en.wikipedia.org/wiki/Color_blindness) 
 please feel free to *skip this chapter*)
 
-As Web/Software developers we use color all the time.
+As Web/Software developers/designers we use color all the time.
+Fonts, Text Highlighting, Images, Backgrounds, Borders, Tables, you name it, all *enhanced* with color!
 
-For the most part we stick to a pre-defined [color-scheme](http://en.wikipedia.org/wiki/Color_scheme) 
+Most of the time we work from a pre-defined 
+[color-scheme](http://en.wikipedia.org/wiki/Color_scheme) 
+enshrined in some brand guidelines.
+but every so often we get to work on something ** * New * **, 
+if you are *lucky* enough to be in that position cherish it!
 
-The RGB (RedGreenBlue) Color System has 16 Million (16,581,375) colors. 
+The process of discovering and deciding on colors can be
+equal parts exciting and frustrating. 
+Several times I have come up against the claim that:
+**"XYZ Corp. is already using that color so we can't..."**
 
-see: http://en.wikipedia.org/wiki/RGB_color_model
+![Brands and their colors](http://images.sixrevisions.com/2009/11/10-03_brand_colors.png "Brand Colors")
+
+See: ["T-Mobile Owns the Color Magenta"](http://www.colourlovers.com/blog/2007/11/04/beware-t-mobile-owns-the-color-magenta/)
+and ["The Battle for Blue"](http://farm1.staticflickr.com/29/56867986_29aa1a3973_o.jpg))
+
+But we need not despair, there are *plenty* of shades still left to chose from!
+The [RGB (RedGreenBlue) Color System](http://en.wikipedia.org/wiki/RGB_color_model) has 16 Million (16,581,375) colors. 
 
 If you looked at *one color per second* it would take **192 days** to cycle through all the available colors. [ 255 x 255 x 255/(60 x 60 x 24) ]
 
@@ -34,7 +47,7 @@ While it would make an OK "modern art" installation
 in a 360-degree projected color room, 
 not that many people have this kind of *time*...
 
-If instead we view a **palete** of colors on a large screen (e.g. 27 inch hi-res display) we have 3.68 Million [2560 x 1440 = 3,686,400] pixels available. 
+If instead we view a **palette** of colors on a large screen (e.g. 27 inch hi-res display) we have 3.68 Million [2560 x 1440 = 3,686,400] pixels available. 
 
 To display *all* the colors at *one color per pixel*
 would require **5 Monitors** to display them all symultaneously. 
@@ -68,3 +81,5 @@ So... lets get on to the palete.
 - Color Lovers (A great place to discover colors): 
 - Quite similar to what I envisaged: http://www.colorschemer.com/online.html
 - Color Blindness research: http://www.colour-blindness.com/general/prevalence/
+- Style Guidelines for Brands: http://www.smashingmagazine.com/2010/07/21/designing-style-guidelines-for-brands-and-websites/
+- Color the next limited resource: http://sixrevisions.com/web_design/color-the-next-limited-resource/
