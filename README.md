@@ -1,23 +1,25 @@
 colors
 ======
 
-![Color Spectrum](https://raw.github.com/nelsonic/colors/master/screenshots/Color-spectrum-thin.png "Color spectrum")
-
 A little experiment in Color (HTML + CSS + JavaScript)
 
-*Sick of not knowing what the names / hex values of colors were I decided to create a little (single-page) colors app.*
+![Color Spectrum](https://raw.github.com/nelsonic/colors/master/screenshots/Color-spectrum-thin.png "Color spectrum")
 
-## Background
+Sick of not knowing what the names / hex values of colors were I decided to create a little colors mini app that I can keep handy when ever I need to look up a color or remember one I've used before. (Don't worry there's more to it, but I'm keeping it simple for now ;-)
 
-Though often overlooked, color is an integral part of life.
+## Intro
 
-As Web/Software developers we use color all the time. 
+Though often overlooked, color is an integral part of our lives.
 
-We use color to highlight identification, communication.
+Nature has used color to communicate since the beginning of time and humans are no exception.
 
-![Life without color](http://fc08.deviantart.net/fs71/i/2011/147/b/e/what__s_life_without_color_by_lydiajeanphotography-d3hdlzp.jpg "A life without color")
+(For the people *unlucky* enough to be 
+[color-blind](http://en.wikipedia.org/wiki/Color_blindness) 
+please feel free to *skip this chapter*)
 
+As Web/Software developers we use color all the time.
 
+For the most part we stick to a pre-defined [color-scheme](http://en.wikipedia.org/wiki/Color_scheme) 
 
 The RGB (RedGreenBlue) Color System has 16 Million (16,581,375) colors. 
 
@@ -40,7 +42,7 @@ would require **5 Monitors** to display them all symultaneously.
 
 How many people have *Five* high-resolution monitors handy...? :-)
 
-So instead we need a way of displaying fewer colors.
+So instead we need a way of displaying fewer colors intelligently.
 
 
 
@@ -59,5 +61,10 @@ Obviously that's not very *useful* (it was just an experiment).
 So... lets get on to the palete.
 
 
+- - -
 
+#### Notes and Research
 
+- Color Lovers (A great place to discover colors): 
+- Quite similar to what I envisaged: http://www.colorschemer.com/online.html
+- Color Blindness research: http://www.colour-blindness.com/general/prevalence/
