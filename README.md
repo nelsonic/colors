@@ -3,7 +3,7 @@ colors
 
 A little experiment in Color (HTML + CSS + JavaScript)
 
-![Color Spectrum](https://raw.github.com/nelsonic/colors/master/screenshots/Color-spectrum-thin.png "Color spectrum")
+![Color Spectrum](https://raw.github.com/nelsonic/colors/master/misc/Color-spectrum-thin.png "Color spectrum")
 
 Sick of not knowing what the names / hex values of colors were I decided to create a little colors mini app that I can keep handy when ever I need to look up a color or remember one I've used before. (Don't worry there's more to it, but I'm keeping it simple for now ;-)
 
@@ -67,7 +67,7 @@ So instead we need a way of displaying fewer colors intelligently.
 While playing I built a quick **Random Color Generator** 
 it does exactly what you would expect. 
 
-![Random Color Generator](https://raw.github.com/nelsonic/colors/master/screenshots/random-color-generator.png "A Simple Random Color Generator!")
+![Random Color Generator](https://raw.github.com/nelsonic/colors/master/misc/random-color-generator.png "A Simple Random Color Generator!")
 
 see: **random.html**
 
@@ -77,9 +77,13 @@ So... lets get on to the palete.
 
 ### ideaQ for ways to Discover Colors
 
-- Color Slider(s)
+- Color Slider(s) 
+- Color Lab (use keyboard R,G,B and arrow keys manipulate colors)
 - Palette with 'Expander'
-- 
+- Search by name auto-complete and expander
+- Colors Trending/Stats (web crawler with focus on colors in CSS documents)
+- Eye Dropper (most graphics programs have this or see *[ColorZilla](http://www.colorzilla.com/)* Firefox Plugin)
+- Colors shared on Twitter ? (long shot but could be interesting ;-)
 
 - - -
 
@@ -88,6 +92,8 @@ So... lets get on to the palete.
 #### Websites Dedicated to Color
 
 - Color Lovers (A great place to discover colors): [colourlovers.com](http://www.colourlovers.com)
+- Color Matters: http://www.colormatters.com/ + http://www.pinterest.com/colormatters/
+- Color Voodoo: www.colorvoodoo.com
 - Spoonflower Color Map: http://www.spoonflower.com/SpoonFlower_ColorMap_2-1.png
 - Visibone Color Charts: http://www.visibone.com/color/
 
@@ -107,4 +113,7 @@ So... lets get on to the palete.
 
 - Color the next limited resource: http://sixrevisions.com/web_design/color-the-next-limited-resource/
 - T-Mobile Owns Magenta: http://www.colourlovers.com/blog/2007/11/04/beware-t-mobile-owns-the-color-magenta/
+- Microsoft Sues Google for Color Infringement: http://www.cap-news.com/story.php?id=200907011
+- Basic Color Theory: http://www.colormatters.com/color-and-design/basic-color-theory
 - Color Blindness research: http://www.colour-blindness.com/general/prevalence/
+- Color Psycology in Medicine: http://munsell.com/color-blog/color-psychology-medicine-jill-morton/
