@@ -36,23 +36,24 @@ See: ["T-Mobile Owns the Color Magenta"](http://www.colourlovers.com/blog/2007/1
 and ["The Battle for Blue"](http://farm1.staticflickr.com/29/56867986_29aa1a3973_o.jpg))
 
 But we need not despair, there are *plenty* of shades still left to chose from!
-The [RGB (RedGreenBlue) Color System](http://en.wikipedia.org/wiki/RGB_color_model) has 16 Million (16,581,375) colors. 
+The [RGB (RedGreenBlue) "True Color" System](http://en.wikipedia.org/wiki/RGB_color_model) 
+has 16.7 Million colors. 
+[ 256 x 256 x 256 = 16,777,216 = 2<sup>24</sup> (Hence 24-Bit Color)] 
 
-If you looked at *one color per second* it would take **192 days** to cycle through all the available colors. [ 255 x 255 x 255/(60 x 60 x 24) ]
+If you looked at *one color per second* it would take **194 days** to cycle through all the available colors. [ 256 x 256 x 256/(60 x 60 x 24) = 194.18]
 
-Even if you viewed each color for just 20 miliseconds (50 colors per second) it would still take almost **4 days** to see them all. [ 255*255*255/(60*60*24*50) ]
+Even if you viewed each color for just 20 miliseconds (50 colors per second) it would still take almost **4 days** to see them all. [ 256 x 256 x 256/(60 x 60 x 24 x 50) = 3.88 ]
 
-Obviously viewing *one* color at a time is inherently slow. 
+Obviously viewing *one* color at a time is *inherently slow*. 
 While it would make an OK "modern art" installation 
 in a 360-degree projected color room, 
 not that many people have this kind of *time*...
 
 If instead we view a **palette** of colors on a large screen (e.g. 27 inch hi-res display) we have 3.68 Million [2560 x 1440 = 3,686,400] pixels available. 
 
-To display *all* the colors at *one color per pixel*
-would require **5 Monitors** to display them all symultaneously. 
-[ 255 x 255 x 255 / (2560 x 1440) = 4.498 ]
-
+To display **ALL colors** (symultaneously) at **one color per pixel**
+would require **5 Monitors** 
+[ 256 x 256 x 256 / (2560 x 1440) = 4.551 ] ... 
 How many people have *Five* high-resolution monitors handy...? :-)
 
 So instead we need a way of displaying fewer colors intelligently.
@@ -63,7 +64,7 @@ So instead we need a way of displaying fewer colors intelligently.
 
 ### Random Color Generator
 
-While I was playing I built a quick **Random Color Generator** 
+While playing I built a quick **Random Color Generator** 
 it does exactly what you would expect. 
 
 ![Random Color Generator](https://raw.github.com/nelsonic/colors/master/screenshots/random-color-generator.png "A Simple Random Color Generator!")
@@ -74,12 +75,36 @@ Obviously that's not very *useful* (it was just an experiment).
 So... lets get on to the palete.
 
 
+### ideaQ for ways to Discover Colors
+
+- Color Slider(s)
+- Palette with 'Expander'
+- 
+
 - - -
 
-#### Notes and Research
+### Notes and Research
 
-- Color Lovers (A great place to discover colors): 
+#### Websites Dedicated to Color
+
+- Color Lovers (A great place to discover colors): [colourlovers.com](http://www.colourlovers.com)
+- Spoonflower Color Map: http://www.spoonflower.com/SpoonFlower_ColorMap_2-1.png
+- Visibone Color Charts: http://www.visibone.com/color/
+
+- PDF with 800 colors: http://planetguide.com/docs/Pantone%20chart%20with%20RGB%20and%20HTML%20conversions.pdf
+- PDF with 18 pages of colors http://www.techfak.uni-bielefeld.de/~walter/misc/colorRGB.pdf (scroll down to see there are in fact many more than "50 Shades of Grey"...)
+
 - Quite similar to what I envisaged: http://www.colorschemer.com/online.html
-- Color Blindness research: http://www.colour-blindness.com/general/prevalence/
 - Style Guidelines for Brands: http://www.smashingmagazine.com/2010/07/21/designing-style-guidelines-for-brands-and-websites/
+
+#### Useful Wikipedia Articles
+
+- Color Depth: http://en.wikipedia.org/wiki/Color_depth
+- RGB Color Model: http://en.wikipedia.org/wiki/RGB_color_model
+- Web Safe Colors: http://en.wikipedia.org/wiki/Web_colors#Web-safe_colors 
+
+#### Colorful Articles and Posts
+
 - Color the next limited resource: http://sixrevisions.com/web_design/color-the-next-limited-resource/
+- T-Mobile Owns Magenta: http://www.colourlovers.com/blog/2007/11/04/beware-t-mobile-owns-the-color-magenta/
+- Color Blindness research: http://www.colour-blindness.com/general/prevalence/
