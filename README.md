@@ -5,7 +5,12 @@ A little experiment in Color (HTML + CSS + JavaScript)
 
 ![Color Spectrum](https://raw.github.com/nelsonic/colors/master/misc/Color-spectrum-thin.png "Color spectrum")
 
-Sick of not knowing what the names / hex values of colors were I decided to create a little colors mini app that I can keep handy when ever I need to look up a color or remember one I've used before. (Don't worry there's more to it, but I'm keeping it simple for now ;-)
+Sick of not knowing the names / hex values of colors 
+I decided to create a little colors mini app 
+that I can keep handy when ever I need to look up a color 
+or remember one I've used before. 
+(Don't worry there's more to it, 
+but I'm keeping it simple for now ;-)
 
 ## Intro
 
@@ -69,15 +74,25 @@ it does exactly what you would expect.
 
 ![Random Color Generator](https://raw.github.com/nelsonic/colors/master/misc/random-color-generator.png "A Simple Random Color Generator!")
 
-see: **random.html**
+see: **./misc/random.html**
 
 Obviously that's not very *useful* (it was just an experiment). 
-So... lets get on to the palete.
+So... lets get get on to something a bit more useful.
+
+### Color Slider
+
+I tried the JQuery UI Slider plugin.
+http://jqueryui.com/slider/#colorpicker
+
+It works fine in on Desktop (click) but fails on Touch (iPad/Phone)
+
+
+
 
 
 ### ideaQ for ways to Discover Colors
 
-- Color Slider(s) 
+- Color Slider(s) (e.g: [JQuery UI](http://jqueryui.com/slider/#colorpicker))
 - Color Lab (use keyboard R,G,B and arrow keys manipulate colors)
 - Palette with 'Expander'
 - Search by name auto-complete and expander
@@ -93,21 +108,27 @@ So... lets get on to the palete.
 
 - Color Lovers (A great place to discover colors): [colourlovers.com](http://www.colourlovers.com)
 - Color Matters: http://www.colormatters.com/ + http://www.pinterest.com/colormatters/
-- Color Voodoo: www.colorvoodoo.com
 - Spoonflower Color Map: http://www.spoonflower.com/SpoonFlower_ColorMap_2-1.png
 - Visibone Color Charts: http://www.visibone.com/color/
+- Elizabeth Castro's Web Safe Colors: http://www.elizabethcastro.com/html/colors/websafecolors.html
+- Web Safe Colors (.info): http://websafecolors.info/
 
 - PDF with 800 colors: http://planetguide.com/docs/Pantone%20chart%20with%20RGB%20and%20HTML%20conversions.pdf
 - PDF with 18 pages of colors http://www.techfak.uni-bielefeld.de/~walter/misc/colorRGB.pdf (scroll down to see there are in fact many more than "50 Shades of Grey"...)
 
-- Quite similar to what I envisaged: http://www.colorschemer.com/online.html
-- Style Guidelines for Brands: http://www.smashingmagazine.com/2010/07/21/designing-style-guidelines-for-brands-and-websites/
+#### Tools
+
+- ColorZilla (Gradient Generator): http://www.colorzilla.com/gradient-editor/
+- Quite similar to what I originally envisaged: http://www.colorschemer.com/online.html
+- Color Scheme Designer: http://colorschemedesigner.com/
+- JQuery UI Color Slider: http://jqueryui.com/slider/#colorpicker
 
 #### Useful Wikipedia Articles
 
 - Color Depth: http://en.wikipedia.org/wiki/Color_depth
 - RGB Color Model: http://en.wikipedia.org/wiki/RGB_color_model
 - Web Safe Colors: http://en.wikipedia.org/wiki/Web_colors#Web-safe_colors 
+- Color Wheel: http://en.wikipedia.org/wiki/Color_wheel
 
 #### Colorful Articles and Posts
 
@@ -117,3 +138,9 @@ So... lets get on to the palete.
 - Basic Color Theory: http://www.colormatters.com/color-and-design/basic-color-theory
 - Color Blindness research: http://www.colour-blindness.com/general/prevalence/
 - Color Psycology in Medicine: http://munsell.com/color-blog/color-psychology-medicine-jill-morton/
+- Style Guidelines for Brands: http://www.smashingmagazine.com/2010/07/21/designing-style-guidelines-for-brands-and-websites/
+
+#### Later
+
+- SublimeText Themes: http://colorsublime.com/
+- SublimeText Theme Format Example: https://github.com/Colorsublime/Colorsublime-Themes/blob/master/themes/Stark.tmTheme
